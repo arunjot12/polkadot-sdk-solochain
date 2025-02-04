@@ -17,6 +17,10 @@ resolver = "2"
 solochain-template-runtime = { path = "./runtime", default-features = false }
 pallet-template = { path = "./pallets/template", default-features = false }
 clap = { version = "4.5.10" }
+aquamarine = { version = "0.5.0" }
+impl-trait-for-tuples = { version = "0.2.3" }
+docify = { version = "0.2.9" }
+log = { version = "0.4.22", default-features = false }
 proc-macro-crate = { version = "3.2.0"}
 quote = { version = "1.0.38" }
 syn = { features = ["full", "visit"], version = "2.0.98" }
@@ -55,6 +59,7 @@ sp-inherents = { version = "34.0.0", default-features = false }
 sp-io = { version = "38.0.0", default-features = false }
 sp-keyring = { version = "39.0.0", default-features = false }
 sp-runtime = { version = "39.0.1", default-features = false }
+sp-tracing = { version = "17.0.1", default-features = false }
 sp-timestamp = { version = "34.0.0", default-features = false }
 substrate-frame-rpc-system = { version = "39.0.0", default-features = false }
 substrate-build-script-utils = { version = "11.0.0", default-features = false }
@@ -76,6 +81,9 @@ sp-genesis-builder = { version = "0.15.1", default-features = false }
 sp-offchain = { version = "34.0.0", default-features = false }
 sp-session = { version = "36.0.0", default-features = false }
 sp-storage = { version = "21.0.0", default-features = false }
+sp-staking = { version = "37.0.0", default-features = false }
+sp-state-machine = { version = "0.44.0", default-features = false }
+sp-trie = { version = "37.0.0", default-features = false }
 sp-transaction-pool = { version = "34.0.0", default-features = false }
 sp-version = { version = "37.0.0", default-features = false }
 substrate-wasm-builder = { version = "24.0.1", default-features = false }

@@ -5418,6 +5418,26 @@ dependencies = [
 
 [[package]]
 name = "pallet-bags-list"
+version = "27.0.0"
+dependencies = [
+ "aquamarine",
+ "docify",
+ "frame-benchmarking 38.0.0",
+ "frame-election-provider-support 28.0.0",
+ "frame-support 38.0.0",
+ "frame-system 38.0.0",
+ "log",
+ "pallet-balances 39.0.0",
+ "parity-scale-codec",
+ "scale-info",
+ "sp-core 34.0.0",
+ "sp-io 38.0.0",
+ "sp-runtime 39.0.2",
+ "sp-tracing",
+]
+
+[[package]]
+name = "pallet-bags-list"
 version = "38.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5177afdf203ef4aec11a356d343fcab43bee85a25fe216f06bfba8199e86d96a"
@@ -5495,6 +5515,26 @@ dependencies = [
 
 [[package]]
 name = "pallet-session"
+version = "28.0.0"
+dependencies = [
+ "frame-support 38.0.0",
+ "frame-system 38.0.0",
+ "impl-trait-for-tuples",
+ "log",
+ "pallet-timestamp 37.0.0",
+ "parity-scale-codec",
+ "scale-info",
+ "sp-core 34.0.0",
+ "sp-io 38.0.0",
+ "sp-runtime 39.0.2",
+ "sp-session 36.0.0",
+ "sp-staking 37.0.0",
+ "sp-state-machine 0.44.0",
+ "sp-trie 37.0.0",
+]
+
+[[package]]
+name = "pallet-session"
 version = "38.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8474b62b6b7622f891e83d922a589e2ad5be5471f5ca47d45831a797dba0b3f4"
@@ -5547,7 +5587,7 @@ dependencies = [
  "frame-system 38.0.0",
  "log",
  "pallet-authorship 39.0.0",
- "pallet-bags-list",
+ "pallet-bags-list 38.0.0",
  "pallet-balances 39.0.0",
  "pallet-session 39.0.0",
  "pallet-staking-reward-curve",

@@ -5332,6 +5332,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "pallet-authorship"
+version = "39.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "452584dcccd8412609dea0d9e63e4b36564b66793e637420624b9f61aa1cf2e9"
+dependencies = [
+ "frame-support 39.0.0",
+ "frame-system 39.1.0",
+ "impl-trait-for-tuples",
+ "parity-scale-codec",
+ "scale-info",
+ "sp-runtime 40.1.0",
+]
+
+[[package]]
 name = "pallet-babe"
 version = "38.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5341,7 +5355,7 @@ dependencies = [
  "frame-support 38.0.0",
  "frame-system 38.0.0",
  "log",
- "pallet-authorship",
+ "pallet-authorship 38.0.0",
  "pallet-session",
  "pallet-timestamp",
  "parity-scale-codec",
@@ -5414,7 +5428,7 @@ dependencies = [
  "frame-support 38.0.0",
  "frame-system 38.0.0",
  "log",
- "pallet-authorship",
+ "pallet-authorship 38.0.0",
  "pallet-session",
  "parity-scale-codec",
  "scale-info",
@@ -5425,6 +5439,26 @@ dependencies = [
  "sp-runtime 39.0.2",
  "sp-session",
  "sp-staking 36.0.0",
+]
+
+[[package]]
+name = "pallet-im-online"
+version = "38.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d9716fd42662b4f00803448eac5b164a470880dc2a6f2809c43a61a03f77b91c"
+dependencies = [
+ "frame-benchmarking 39.0.0",
+ "frame-support 39.0.0",
+ "frame-system 39.1.0",
+ "log",
+ "pallet-authorship 39.0.0",
+ "parity-scale-codec",
+ "scale-info",
+ "sp-application-crypto 39.0.0",
+ "sp-core 35.0.0",
+ "sp-io 39.0.0",
+ "sp-runtime 40.1.0",
+ "sp-staking 37.0.0",
 ]
 
 [[package]]
@@ -5477,7 +5511,7 @@ dependencies = [
  "frame-support 38.0.0",
  "frame-system 38.0.0",
  "log",
- "pallet-authorship",
+ "pallet-authorship 38.0.0",
  "pallet-session",
  "parity-scale-codec",
  "scale-info",
@@ -8557,6 +8591,7 @@ dependencies = [
  "pallet-balances 39.0.0",
  "pallet-collective",
  "pallet-grandpa",
+ "pallet-im-online",
  "pallet-offences",
  "pallet-session",
  "pallet-staking",

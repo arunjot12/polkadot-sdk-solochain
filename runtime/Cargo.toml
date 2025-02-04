@@ -31,6 +31,8 @@ pallet-staking.workspace = true
 pallet-staking-reward-curve.workspace = true
 pallet-session.workspace = true
 pallet-offences.workspace = true
+pallet-treasury.workspace = true
+pallet-collective.workspace = true
 pallet-balances.workspace = true
 pallet-grandpa.workspace = true
 pallet-sudo.workspace = true
@@ -85,6 +87,8 @@ std = [
 	"pallet-sudo/std",
 	"pallet-template/std",
 	"pallet-timestamp/std",
+	"pallet-collective/std",
+	"pallet-treasury/std",
 	"sp-staking/std",
 	"pallet-transaction-payment-rpc-runtime-api/std",
 	"pallet-transaction-payment/std",

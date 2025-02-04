@@ -62,6 +62,8 @@ pallet-staking-reward-curve = { version = "12.0.0",default-features = false}
 pallet-session = { version = "38.0.0",default-features = false}
 pallet-offences = { version = "38.0.0",default-features = false}
 pallet-staking = { version = "38.0.0",default-features = false}
+pallet-collective = { version = "38.0.0",default-features = false}
+pallet-treasury = { version = "38.0.0",default-features = false}
 frame-election-provider-support ={ path= "pallets/election-provider-support", default-features = false}
 frame-election-provider-solution-type ={ path= "pallets/election-provider-support/solution-type", default-features = false}
 sc-basic-authorship = { version = "0.45.0", default-features = false }

@@ -10,6 +10,7 @@ pub mod configs;
 
 extern crate alloc;
 use alloc::vec::Vec;
+use pallet_session::historical as pallet_session_historical;
 use sp_runtime::{
 	create_runtime_str, generic, impl_opaque_keys,
 	traits::{BlakeTwo256, IdentifyAccount, Verify},
@@ -233,5 +234,7 @@ mod runtime {
 	#[runtime::pallet_index(10)]
 	pub type Offences = pallet_offences;
 
+	#[runtime::pallet_index(11)]
+	pub type Historical = pallet_session_historical;
 
 }

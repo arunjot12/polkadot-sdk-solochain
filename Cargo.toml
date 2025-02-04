@@ -9,7 +9,7 @@ edition = "2021"
 members = [
     "node",
     "pallets/*",
-     "primitives/*",
+    #  "primitives/*",
     "runtime",
 ]
 resolver = "2"
@@ -108,8 +108,8 @@ sp-session = { version = "36.0.0", default-features = false }
 sp-storage = { version = "21.0.0", default-features = false }
 sp-externalities = { path="primitives/externalities", default-features = false }
 sp-staking ={ path="primitives/staking", default-features = false }
-sp-state-machine = { path="primitives/state-machine", default-features = false }
-sp-trie = { version = "37.0.0", default-features = false }
+sp-state-machine ={ version = "0.44.0", default-features = false }
+sp-trie = { version = "38.0.0", default-features = false }
 sp-panic-handler= { path="primitives/panic-handler", default-features = false }
 sp-transaction-pool = { version = "34.0.0", default-features = false }
 sp-version = { version = "37.0.0", default-features = false }

@@ -8,8 +8,7 @@ edition = "2021"
 [workspace]
 members = [
     "node",
-    "pallets/template",
-    "pallets/staking",
+    "pallets/*",
     "runtime",
 ]
 resolver = "2"
@@ -18,6 +17,10 @@ resolver = "2"
 solochain-template-runtime = { path = "./runtime", default-features = false }
 pallet-template = { path = "./pallets/template", default-features = false }
 clap = { version = "4.5.10" }
+proc-macro-crate = { version = "3.2.0"}
+quote = { version = "1.0.38" }
+syn = { features = ["full", "visit"], version = "2.0.98" }
+proc-macro2 = { version = "1.0.93" }
 frame-benchmarking-cli = { version = "43.0.0", default-features = false }
 frame-metadata-hash-extension = { version = "0.6.0", default-features = false }
 frame-system = { version = "38.0.0", default-features = false }
@@ -26,6 +29,8 @@ jsonrpsee = { version = "0.24.3" }
 pallet-transaction-payment = { version = "38.0.0", default-features = false }
 pallet-transaction-payment-rpc = { version = "41.0.0", default-features = false }
 pallet-staking-reward-curve ={path="pallets/staking/reward-curve",default-features = false}
+frame-election-provider-support ={ path= "pallets/election-provider-support", default-features = false}
+frame-election-provider-solution-type ={ path= "pallets/election-provider-support/solution-type", default-features = false}
 sc-basic-authorship = { version = "0.45.0", default-features = false }
 sc-cli = { version = "0.47.0", default-features = false }
 sc-client-api = { version = "37.0.0", default-features = false }

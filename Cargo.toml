@@ -8,8 +8,8 @@ edition = "2021"
 [workspace]
 members = [
     "node",
-    "pallets/*",
-    "primitives/*",
+    "pallets/template",
+    # "primitives/*",
     "runtime",
 ]
 resolver = "2"
@@ -55,9 +55,13 @@ frame-metadata-hash-extension = { version = "0.6.0", default-features = false }
 frame-system = { version = "38.0.0", default-features = false }
 futures = { version = "0.3.30" }
 jsonrpsee = { version = "0.24.3" }
+pallet-babe = { version = "38.0.0",default-features = false}
 pallet-transaction-payment = { version = "38.0.0", default-features = false }
 pallet-transaction-payment-rpc = { version = "41.0.0", default-features = false }
-pallet-staking-reward-curve ={path="pallets/staking/reward-curve",default-features = false}
+pallet-staking-reward-curve = { version = "12.0.0",default-features = false}
+pallet-session = { version = "38.0.0",default-features = false}
+pallet-offences = { version = "38.0.0",default-features = false}
+pallet-staking = { version = "38.0.0",default-features = false}
 frame-election-provider-support ={ path= "pallets/election-provider-support", default-features = false}
 frame-election-provider-solution-type ={ path= "pallets/election-provider-support/solution-type", default-features = false}
 sc-basic-authorship = { version = "0.45.0", default-features = false }
@@ -107,7 +111,7 @@ sp-offchain = { version = "34.0.0", default-features = false }
 sp-session = { version = "36.0.0", default-features = false }
 sp-storage = { version = "21.0.0", default-features = false }
 sp-externalities = { path="primitives/externalities", default-features = false }
-sp-staking ={ path="primitives/staking", default-features = false }
+sp-staking = { version = "37.0.0", default-features = false }
 sp-state-machine ={ version = "0.44.0", default-features = false }
 sp-trie = { version = "38.0.0", default-features = false }
 sp-panic-handler= { path="primitives/panic-handler", default-features = false }

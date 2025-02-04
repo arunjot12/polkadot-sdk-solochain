@@ -2250,8 +2250,25 @@ dependencies = [
  "scale-info",
  "sp-arithmetic",
  "sp-core 34.0.0",
- "sp-npos-elections",
+ "sp-npos-elections 34.0.0",
  "sp-runtime 39.0.2",
+]
+
+[[package]]
+name = "frame-election-provider-support"
+version = "39.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3d62cba64438e4f6f8b78c8c7ec1953ba3c3f4933245412b44501b31df0f87ef"
+dependencies = [
+ "frame-election-provider-solution-type",
+ "frame-support 39.0.0",
+ "frame-system 39.1.0",
+ "parity-scale-codec",
+ "scale-info",
+ "sp-arithmetic",
+ "sp-core 35.0.0",
+ "sp-npos-elections 35.0.0",
+ "sp-runtime 40.1.0",
 ]
 
 [[package]]
@@ -5419,6 +5436,43 @@ dependencies = [
 ]
 
 [[package]]
+name = "pallet-election-provider-multi-phase"
+version = "38.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b0b0ee2c6c30e1fc820254f13f6e67d4fe4446abb39fb5e9df861839c7325d3b"
+dependencies = [
+ "frame-benchmarking 39.0.0",
+ "frame-election-provider-support 39.0.0",
+ "frame-support 39.0.0",
+ "frame-system 39.1.0",
+ "log",
+ "pallet-election-provider-support-benchmarking",
+ "parity-scale-codec",
+ "rand",
+ "scale-info",
+ "sp-arithmetic",
+ "sp-core 35.0.0",
+ "sp-io 39.0.0",
+ "sp-npos-elections 35.0.0",
+ "sp-runtime 40.1.0",
+ "strum 0.26.3",
+]
+
+[[package]]
+name = "pallet-election-provider-support-benchmarking"
+version = "38.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3b088389136786a84eacbbeefb66ec19deca9d279b9c5c3a6391e39294c876cf"
+dependencies = [
+ "frame-benchmarking 39.0.0",
+ "frame-election-provider-support 39.0.0",
+ "frame-system 39.1.0",
+ "parity-scale-codec",
+ "sp-npos-elections 35.0.0",
+ "sp-runtime 40.1.0",
+]
+
+[[package]]
 name = "pallet-grandpa"
 version = "38.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5459,6 +5513,23 @@ dependencies = [
  "sp-io 39.0.0",
  "sp-runtime 40.1.0",
  "sp-staking 37.0.0",
+]
+
+[[package]]
+name = "pallet-indices"
+version = "38.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c5e4b97de630427a39d50c01c9e81ab8f029a00e56321823958b39b438f7b940"
+dependencies = [
+ "frame-benchmarking 38.0.0",
+ "frame-support 38.0.0",
+ "frame-system 38.0.0",
+ "parity-scale-codec",
+ "scale-info",
+ "sp-core 34.0.0",
+ "sp-io 38.0.0",
+ "sp-keyring",
+ "sp-runtime 39.0.2",
 ]
 
 [[package]]
@@ -5507,7 +5578,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c870d123f4f053b56af808a4beae1ffc4309a696e829796c26837936c926db3b"
 dependencies = [
  "frame-benchmarking 38.0.0",
- "frame-election-provider-support",
+ "frame-election-provider-support 38.0.0",
  "frame-support 38.0.0",
  "frame-system 38.0.0",
  "log",
@@ -8590,8 +8661,10 @@ dependencies = [
  "pallet-babe",
  "pallet-balances 39.0.0",
  "pallet-collective",
+ "pallet-election-provider-multi-phase",
  "pallet-grandpa",
  "pallet-im-online",
+ "pallet-indices",
  "pallet-offences",
  "pallet-session",
  "pallet-staking",
@@ -9213,6 +9286,20 @@ dependencies = [
  "sp-arithmetic",
  "sp-core 34.0.0",
  "sp-runtime 39.0.2",
+]
+
+[[package]]
+name = "sp-npos-elections"
+version = "35.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6df43d267689ec0e10e61eff57543af326f769481215cd43022e791c32ce30a3"
+dependencies = [
+ "parity-scale-codec",
+ "scale-info",
+ "serde",
+ "sp-arithmetic",
+ "sp-core 35.0.0",
+ "sp-runtime 40.1.0",
 ]
 
 [[package]]

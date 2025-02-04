@@ -35,6 +35,8 @@ pallet-im-online.workspace = true
 pallet-treasury.workspace = true
 pallet-collective.workspace = true
 pallet-balances.workspace = true
+pallet-election-provider-multi-phase.workspace = true
+pallet-indices.workspace = true
 pallet-grandpa.workspace = true
 pallet-sudo.workspace = true
 pallet-timestamp.workspace = true
@@ -88,6 +90,8 @@ std = [
 	"pallet-sudo/std",
 	"pallet-template/std",
 	"pallet-timestamp/std",
+	"pallet-election-provider-multi-phase/std",
+	"pallet-indices/std",
 	"pallet-collective/std",
 	"pallet-im-online/std",
 	"pallet-treasury/std",

@@ -65,10 +65,12 @@ pallet-im-online = { version = "38.0.0",default-features = false}
 pallet-election-provider-multi-phase = { version = "38.0.0",default-features = false}
 pallet-indices = { version = "38.0.0",default-features = false}
 pallet-staking = { version = "38.0.0",default-features = false}
+pallet-staking-runtime-api= { version = "25.0.0",default-features = false}
 pallet-collective = { version = "38.0.0",default-features = false}
 pallet-treasury = { version = "38.0.0",default-features = false}
 pallet-bags-list = { version = "38.0.0",default-features = false}
 pallet-nomination-pools = { version = "37.0.0",default-features = false}
+pallet-nomination-pools-runtime-api = { version = "35.0.0",default-features = false}
 frame-election-provider-support ={ version = "38.0.0",default-features = false}
 frame-election-provider-solution-type ={ version = "14.0.1",default-features = false }
 sc-basic-authorship = { version = "0.45.0", default-features = false }
@@ -86,9 +88,11 @@ sc-transaction-pool = { version = "37.0.0", default-features = false }
 sc-transaction-pool-api = { version = "37.0.0", default-features = false }
 serde_json = { version = "1.0.127", default-features = false }
 sp-api = { version = "34.0.0", default-features = false }
+sp-authority-discovery = { version = "35.0.0", default-features = false }
 sp-block-builder = { version = "34.0.0", default-features = false }
 sp-blockchain = { version = "37.0.1", default-features = false }
 sp-consensus-aura = { version = "0.40.0", default-features = false }
+sp-consensus-babe = { version = "0.41.0", default-features = false }
 sp-consensus-grandpa = { version = "21.0.0", default-features = false }
 sp-core = { version = "34.0.0", default-features = false }
 sp-inherents = { version = "34.0.0", default-features = false }

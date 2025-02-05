@@ -5394,7 +5394,7 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "sp-application-crypto 38.0.0",
- "sp-consensus-babe",
+ "sp-consensus-babe 0.40.0",
  "sp-core 34.0.0",
  "sp-io 38.0.0",
  "sp-runtime 39.0.2",
@@ -5627,6 +5627,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "pallet-nomination-pools-runtime-api"
+version = "35.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a40136a17d80af5acf0efd78caad3529beb8a50a4fbad442e528ea9a60ff719e"
+dependencies = [
+ "pallet-nomination-pools",
+ "parity-scale-codec",
+ "sp-api 35.0.0",
+]
+
+[[package]]
 name = "pallet-offences"
 version = "38.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5719,6 +5730,17 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 2.0.98",
+]
+
+[[package]]
+name = "pallet-staking-runtime-api"
+version = "25.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "de1e238e23c94fd8bc089e87dfbcd3e7448b32c89f65743d2693508977402510"
+dependencies = [
+ "parity-scale-codec",
+ "sp-api 35.0.0",
+ "sp-staking 37.0.0",
 ]
 
 [[package]]
@@ -7460,7 +7482,7 @@ dependencies = [
  "sp-blockchain",
  "sp-consensus",
  "sp-consensus-aura",
- "sp-consensus-slots",
+ "sp-consensus-slots 0.40.1",
  "sp-core 34.0.0",
  "sp-inherents 34.0.0",
  "sp-keystore 0.40.0",
@@ -7531,7 +7553,7 @@ dependencies = [
  "sp-arithmetic",
  "sp-blockchain",
  "sp-consensus",
- "sp-consensus-slots",
+ "sp-consensus-slots 0.40.1",
  "sp-core 34.0.0",
  "sp-inherents 34.0.0",
  "sp-runtime 39.0.2",
@@ -8807,10 +8829,12 @@ dependencies = [
  "pallet-im-online",
  "pallet-indices",
  "pallet-nomination-pools",
+ "pallet-nomination-pools-runtime-api",
  "pallet-offences",
  "pallet-session 38.0.0",
  "pallet-staking",
  "pallet-staking-reward-curve",
+ "pallet-staking-runtime-api",
  "pallet-sudo",
  "pallet-template",
  "pallet-timestamp 37.0.0",
@@ -8820,8 +8844,10 @@ dependencies = [
  "parity-scale-codec",
  "scale-info",
  "sp-api 34.0.0",
+ "sp-authority-discovery",
  "sp-block-builder",
  "sp-consensus-aura",
+ "sp-consensus-babe 0.41.0",
  "sp-consensus-grandpa",
  "sp-core 34.0.0",
  "sp-genesis-builder 0.15.1",
@@ -9026,7 +9052,7 @@ dependencies = [
  "scale-info",
  "sp-api 34.0.0",
  "sp-application-crypto 38.0.0",
- "sp-consensus-slots",
+ "sp-consensus-slots 0.40.1",
  "sp-inherents 34.0.0",
  "sp-runtime 39.0.2",
  "sp-timestamp 34.0.0",
@@ -9044,11 +9070,30 @@ dependencies = [
  "serde",
  "sp-api 34.0.0",
  "sp-application-crypto 38.0.0",
- "sp-consensus-slots",
+ "sp-consensus-slots 0.40.1",
  "sp-core 34.0.0",
  "sp-inherents 34.0.0",
  "sp-runtime 39.0.2",
  "sp-timestamp 34.0.0",
+]
+
+[[package]]
+name = "sp-consensus-babe"
+version = "0.41.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e1633fab9075508861b82999305a3d3d35f35a780feaf4e81f9d59aa6d62e5f7"
+dependencies = [
+ "async-trait",
+ "parity-scale-codec",
+ "scale-info",
+ "serde",
+ "sp-api 35.0.0",
+ "sp-application-crypto 39.0.0",
+ "sp-consensus-slots 0.41.0",
+ "sp-core 35.0.0",
+ "sp-inherents 35.0.0",
+ "sp-runtime 40.1.0",
+ "sp-timestamp 35.0.0",
 ]
 
 [[package]]
@@ -9079,6 +9124,18 @@ dependencies = [
  "scale-info",
  "serde",
  "sp-timestamp 34.0.0",
+]
+
+[[package]]
+name = "sp-consensus-slots"
+version = "0.41.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6d79170cc0a66b22d29adee140017a16c01257d61b5d713bbe47224eb7c3dd45"
+dependencies = [
+ "parity-scale-codec",
+ "scale-info",
+ "serde",
+ "sp-timestamp 35.0.0",
 ]
 
 [[package]]

@@ -19,6 +19,7 @@ use sp_runtime::{
 #[cfg(feature = "std")]
 use sp_version::NativeVersion;
 use sp_version::RuntimeVersion;
+// use crate::ElectionProviderMultiPhase;
 
 pub use frame_system::Call as SystemCall;
 pub use pallet_balances::Call as BalancesCall;
@@ -236,5 +237,22 @@ mod runtime {
 
 	#[runtime::pallet_index(11)]
 	pub type Historical = pallet_session_historical;
+
+	#[runtime::pallet_index(12)]
+	pub type ElectionProviderMultiPhase = pallet_election_provider_multi_phase;
+
+	#[runtime::pallet_index(13)]
+	pub type VoterList = pallet_bags_list<Instance1>;
+
+	#[runtime::pallet_index(14)]
+	pub type NominationPools = pallet_nomination_pools;
+
+	#[runtime::pallet_index(15)]
+	pub type Indices = pallet_indices;
+
+	#[runtime::pallet_index(16)]
+	pub type Bounties = pallet_bounties;
+
+
 
 }

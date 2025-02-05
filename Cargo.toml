@@ -67,8 +67,10 @@ pallet-indices = { version = "38.0.0",default-features = false}
 pallet-staking = { version = "38.0.0",default-features = false}
 pallet-collective = { version = "38.0.0",default-features = false}
 pallet-treasury = { version = "38.0.0",default-features = false}
-frame-election-provider-support ={ path= "pallets/election-provider-support", default-features = false}
-frame-election-provider-solution-type ={ path= "pallets/election-provider-support/solution-type", default-features = false}
+pallet-bags-list = { version = "38.0.0",default-features = false}
+pallet-nomination-pools = { version = "37.0.0",default-features = false}
+frame-election-provider-support ={ version = "38.0.0",default-features = false}
+frame-election-provider-solution-type ={ version = "14.0.1",default-features = false }
 sc-basic-authorship = { version = "0.45.0", default-features = false }
 sc-cli = { version = "0.47.0", default-features = false }
 sc-client-api = { version = "37.0.0", default-features = false }
@@ -106,6 +108,7 @@ frame-system-rpc-runtime-api = { version = "34.0.0", default-features = false }
 frame-try-runtime = { version = "0.44.0", default-features = false }
 pallet-aura = { version = "37.0.0", default-features = false }
 pallet-balances = { version = "39.0.0", default-features = false }
+pallet-bounties = { version = "38.0.1", default-features = false }
 pallet-grandpa = { version = "38.0.0", default-features = false }
 pallet-sudo = { version = "38.0.0", default-features = false }
 pallet-timestamp = { version = "37.0.0", default-features = false }

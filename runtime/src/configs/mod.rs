@@ -33,13 +33,16 @@ use frame_support::{
 	},
 };
 use crate::DAYS;
+use crate::ChildBounties;
 use frame_election_provider_support::onchain;
 use sp_runtime::Percent;
+use pallet_im_online::sr25519::AuthorityId as ImOnlineId;
 use frame_support::PalletId;
 use frame_support::weights::constants::BlockExecutionWeight;
 use frame_election_provider_support::bounds::ElectionBounds;
 use frame_election_provider_support::BalancingConfig;
 use frame_support::pallet_prelude::Get;
+use sp_runtime::FixedU128;
 use crate::Babe;
 use frame_support::pallet_prelude::DispatchClass;
 use crate::Historical;
@@ -48,12 +51,14 @@ use sp_runtime::transaction_validity::TransactionPriority;
 use scale_info::prelude::vec;
 use crate::VoterList;
 use crate::Session;
+use crate::Treasury;
 use crate::NominationPools;
 use crate::configs::currency::DOLLARS;
 use crate::ElectionProviderMultiPhase;
 use crate::configs::time::EPOCH_DURATION_IN_BLOCKS;
 use crate::configs::currency::CENTS;
 use crate::Timestamp;
+mod voter_bags;
 use crate::Bounties;
 use crate::Indices;
 use crate::TransactionPayment;
@@ -657,12 +662,54 @@ parameter_types! {
 	pub const IndexDeposit: Balance = 1 * DOLLARS;
 }
 
+pub type AccountIndex = u32;
+
 impl pallet_indices::Config for Runtime {
 	type AccountIndex = AccountIndex;
 	type Currency = Balances;
 	type Deposit = IndexDeposit;
 	type RuntimeEvent = RuntimeEvent;
 	type WeightInfo = pallet_indices::weights::SubstrateWeight<Runtime>;
+}
+
+parameter_types! {
+	pub const ChildBountyValueMinimum: Balance = 1 * DOLLARS;
+}
+
+impl pallet_child_bounties::Config for Runtime {
+	type RuntimeEvent = RuntimeEvent;
+	type MaxActiveChildBountyCount = ConstU32<5>;
+	type ChildBountyValueMinimum = ChildBountyValueMinimum;
+	type WeightInfo = pallet_child_bounties::weights::SubstrateWeight<Runtime>;
+}
+
+parameter_types! {
+	pub const ImOnlineUnsignedPriority: TransactionPriority = TransactionPriority::max_value();
+	/// We prioritize im-online heartbeats over election solution submission.
+	pub const StakingUnsignedPriority: TransactionPriority = TransactionPriority::max_value() / 2;
+	pub const MaxKeys: u32 = 10_000;
+	pub const MaxPeerInHeartbeats: u32 = 10_000;
+}
+
+impl pallet_im_online::Config for Runtime {
+	type AuthorityId = ImOnlineId;
+	type RuntimeEvent = RuntimeEvent;
+	type NextSessionRotation = Babe;
+	type ValidatorSet = Historical;
+	type ReportUnresponsiveness = Offences;
+	type UnsignedPriority = ImOnlineUnsignedPriority;
+	type WeightInfo = pallet_im_online::weights::SubstrateWeight<Runtime>;
+	type MaxKeys = MaxKeys;
+	type MaxPeerInHeartbeats = MaxPeerInHeartbeats;
+}
+
+impl pallet_authority_discovery::Config for Runtime {
+	type MaxAuthorities = MaxAuthorities;
+}
+
+
+impl pallet_authority_discovery::Config for Runtime {
+	type MaxAuthorities = MaxAuthorities;
 }
 
 

@@ -253,6 +253,17 @@ mod runtime {
 	#[runtime::pallet_index(16)]
 	pub type Bounties = pallet_bounties;
 
+	#[runtime::pallet_index(17)]
+	pub type ChildBounties = pallet_child_bounties;
+
+	#[runtime::pallet_index(18)]
+	pub type ImOnline = pallet_im_online;
+
+	#[runtime::pallet_index(19)]
+	pub type AuthorityDiscovery = pallet_authority_discovery;
+
+	#[runtime::pallet_index(20)]
+	pub type Treasury = pallet_treasury;
 
 
 }

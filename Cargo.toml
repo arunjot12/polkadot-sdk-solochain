@@ -95,7 +95,7 @@ sp-inherents = { version = "34.0.0", default-features = false }
 sp-io = { version = "38.0.0", default-features = false }
 sp-keyring = { version = "39.0.0", default-features = false }
 sp-runtime = { version = "39.0.1", default-features = false }
-sp-tracing = { path="primitives/tracing", default-features = false }
+# sp-tracing = { path="primitives/tracing", default-features = false }
 sp-timestamp = { version = "34.0.0", default-features = false }
 substrate-frame-rpc-system = { version = "39.0.0", default-features = false }
 substrate-build-script-utils = { version = "11.0.0", default-features = false }
@@ -108,7 +108,9 @@ frame-system-rpc-runtime-api = { version = "34.0.0", default-features = false }
 frame-try-runtime = { version = "0.44.0", default-features = false }
 pallet-aura = { version = "37.0.0", default-features = false }
 pallet-balances = { version = "39.0.0", default-features = false }
+pallet-authority-discovery ={  version = "39.0.0", default-features = false }
 pallet-bounties = { version = "38.0.1", default-features = false }
+pallet-child-bounties = { version = "38.0.0", default-features = false }
 pallet-grandpa = { version = "38.0.0", default-features = false }
 pallet-sudo = { version = "38.0.0", default-features = false }
 pallet-timestamp = { version = "37.0.0", default-features = false }
@@ -118,11 +120,11 @@ sp-genesis-builder = { version = "0.15.1", default-features = false }
 sp-offchain = { version = "34.0.0", default-features = false }
 sp-session = { version = "36.0.0", default-features = false }
 sp-storage = { version = "21.0.0", default-features = false }
-sp-externalities = { path="primitives/externalities", default-features = false }
+# sp-externalities = { path="primitives/externalities", default-features = false }
 sp-staking = { version = "37.0.0", default-features = false }
 sp-state-machine ={ version = "0.44.0", default-features = false }
 sp-trie = { version = "38.0.0", default-features = false }
-sp-panic-handler= { path="primitives/panic-handler", default-features = false }
+# sp-panic-handler= { path="primitives/panic-handler", default-features = false }
 sp-transaction-pool = { version = "34.0.0", default-features = false }
 sp-version = { version = "37.0.0", default-features = false }
 substrate-wasm-builder = { version = "24.0.1", default-features = false }
